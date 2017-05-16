@@ -26,7 +26,7 @@ platforms:
     driver:
       name: vagrant
       network:
-        - ["forwarded_port", {guest: 80, host: 8080}]
+        - ["forwarded_port", {guest: 8080, host: 8080}]
 #  - name: amazon
 #    driver:
 #      image_id: ami-d2c924b2
