@@ -6,16 +6,13 @@
 
 # Jenkins require Java version >= 1.7
 
-#node.default['java']['jdk_version'] = '7'
+node.default['java']['jdk_version'] = '7'
 #node.default['jenkins']['java'] = '/usr/lib/jvm/java-1.7.0/bin/java'
-#node.default['jenkins']['java'] = 'java' # just run the default.
-
-#yum_package 'java-1.8.0-openjdk-devel' do
-#  action :install
-#end
+node.default['jenkins']['java'] = 'java' # just run the default.
 
 include_recipe "chef-centos7-common::default"
 include_recipe "chef-centos7-workstation::default"
 include_recipe "chef-centos7-httpd::default"
 include_recipe "java::default"
-include_recipe "jenkins::default"
+include_recipe "maven::default"
+include_recipe "jenkins::master"
