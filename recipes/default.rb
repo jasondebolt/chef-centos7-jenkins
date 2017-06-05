@@ -16,3 +16,11 @@ include_recipe "chef-centos7-httpd::default"
 include_recipe "java::default"
 include_recipe "maven::default"
 include_recipe "jenkins::master"
+
+
+# Create password credentials
+jenkins_password_credentials 'wcoyote' do
+  id          'wcoyote-password'
+  description 'Wile E Coyote'
+  password    'beepbeep'
+end

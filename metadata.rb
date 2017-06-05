@@ -4,7 +4,7 @@ maintainer_email 'jasondebolt@gmail.com'
 license 'all_rights'
 description 'Installs/Configures chef-centos7-jenkins'
 long_description 'Installs/Configures chef-centos7-jenkins'
-version '0.2.8'
+version '0.2.9'
 
 issues_url 'https://github.com/jasondebolt/chef-centos7-jenkins/issues' if respond_to?(:issues_url)
 
